@@ -1,15 +1,14 @@
-import React from 'react'
-import { ConnectedRouter } from 'connected-react-router'
-import routeHistory from 'route-history'
-import { Switch, Route } from 'react-router-dom'
-import { Layout } from 'antd'
-import styled from 'styled-components'
+import React from 'react';
+import { ConnectedRouter } from 'connected-react-router';
+import routeHistory from 'route-history';
+import { Switch, Route } from 'react-router-dom';
+import { Layout } from 'antd';
+import styled from 'styled-components';
+import NotFound from './NotFound';
+import Rates from './Rates';
+import Header from './Header';
 
-import NotFound from './NotFound'
-import Rates from './Rates'
-import Header from './Header'
-
-const { Content } = Layout
+const { Content } = Layout;
 
 function App() {
   return (
@@ -26,15 +25,15 @@ function App() {
         </Layout>
       </Layout>
     </ConnectedRouter>
-  )
+  );
 }
 
 export default styled(App)`
-    background:#001529;
-  .ant-layout-header{
-    height:60px;
-    background:#001529;
-    display:flex;
-    align-items:center;
+  background: #001529;
+  .ant-layout-header {
+    height: 60px;
+    background: #001529;
+    display: flex;
+    align-items: center;
   }
-`
+`;
