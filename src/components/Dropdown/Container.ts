@@ -7,14 +7,14 @@ import {
 } from "actions/ratesActions";
 
 import { IAppState } from "store";
-import Component from "./Component";
-import { getCurrenciesArr } from "components/common/helpers";
-import { currencyToDisplay } from "components/common/config";
+import Dropdown from "./Dropdown";
+
+import { getCurrenciesArr } from "../common/helpers";
+import { currencyToDisplay } from "../common/config";
 
 const mapStateToProps = (state: IAppState) => ({
   fetching: state.common.fetching,
-  rates: state.rates.rates,
-  currenciesItems: getCurrenciesArr(currencyToDisplay, state.rates.currencies),
+  menuItems: getCurrenciesArr(currencyToDisplay, state.rates.currencies),
 });
 
 const mapActionsToProps = (dispatch) =>
@@ -28,4 +28,4 @@ const mapActionsToProps = (dispatch) =>
 
 const connector = connect(mapStateToProps, mapActionsToProps);
 export type TReduxProps = ConnectedProps<typeof connector>;
-export default connector(Component);
+export default connector(Dropdown);
